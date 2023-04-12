@@ -1,0 +1,5 @@
+name: Cropper image formatter
+type: module
+description: Provides Cropper formatter for image field.
+package: Custom
+core_version_requirement: ^9 || ^10

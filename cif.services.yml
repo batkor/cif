@@ -1,0 +1,5 @@
+services:
+  cif.manager:
+    class: Drupal\cif\CifManager
+    arguments:
+      - '@entity_type.manager'

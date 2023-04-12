@@ -1,0 +1,7 @@
+cif.upload:
+  path: '/cif/upload'
+  defaults:
+    _controller: '\Drupal\cif\Controller\CifController::upload'
+  requirements:
+    _custom_access: '\Drupal\cif\Controller\CifController::access'
+    _csrf_request_header_token: 'TRUE'

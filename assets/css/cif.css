@@ -1,0 +1,65 @@
+.cropper_wrapper {
+  position: relative;
+}
+
+.cropper_popup_open {
+  overflow: hidden;
+}
+
+.upload-submit {
+  background-image: url(../images/upload.svg);
+  display: inline-block;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 99;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(78, 78, 78, 0.71);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  border-radius: 50%;
+}
+
+.cropper_popup.visually-hidden {
+  display: none;
+}
+
+.cropper_popup {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.cropper_popup_content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  display: flex;
+  flex-direction: column;
+  outline: 0;
+  margin: 1.75rem auto;
+  max-width: 500px;
+}
+
+.cropper_popup_body {
+  /*flex-basis: 350px;*/
+  width: 450px;
+}
+
+#cropper_popup_img {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}

@@ -1,0 +1,18 @@
+init:
+  js:
+    assets/js/cif.js: {}
+  css:
+    component:
+      assets/css/cif.css: {}
+  dependencies:
+    - core/drupal
+    - core/drupal.dialog
+    - core/once
+    - cif/cropper
+
+cropper:
+  js:
+    /libraries/cropperjs/cropper.min.js: {}
+  css:
+    base:
+      /libraries/cropperjs/cropper.min.css: {}
