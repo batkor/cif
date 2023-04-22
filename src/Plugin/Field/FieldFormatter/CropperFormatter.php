@@ -5,6 +5,7 @@ namespace Drupal\cif\Plugin\Field\FieldFormatter;
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
 use Drupal\image\Plugin\Field\FieldFormatter\ImageFormatter;
 
 /**
@@ -27,7 +28,7 @@ class CropperFormatter extends ImageFormatter {
     $elements = parent::viewElements($items, $langcode);
     $elements['#attached']['library'][] = 'cif/init';
 
-    foreach ($items as $delta => $item) {
+    foreach (Element::children($elements) as $delta) {
       $elements[$delta]['#item_attributes']['cropper-data'] = [
         'type' => $items->getEntity()->getEntityTypeId(),
         'bundle' => $items->getEntity()->bundle(),
